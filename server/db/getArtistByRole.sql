@@ -26,7 +26,9 @@ FROM
       I.artistid
     
   ) AS images ON images.artistid = U.id 
+
+  JOIN workinfo AS w ON w.artistid = u.id
   
-  WHERE U.role = ${role}
+  WHERE w.role = ${role}
   
   

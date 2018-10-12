@@ -1,2 +1,7 @@
-SELECT u.firstname, u.lastname, u.username, u.profilepicture FROM users AS U
-WHERE U.id = ${id}
+SELECT  COALESCE(firstname, '') as firstname,
+        COALESCE(lastname, '') as lastname,
+        COALESCE(username, '') as username, 
+        COALESCE(profilepicture, '') as profilepicture 
+        
+FROM users
+WHERE id = ${id}

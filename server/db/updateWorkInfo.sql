@@ -1,7 +1,10 @@
 UPDATE workInfo 
 SET location = ${location},
-    about = ${about}
+    about = ${about},
+    email = ${email},
+    role = ${role}
 
-WHERE artistid = 1
+
+WHERE artistid = ${artistid}
 
 RETURNING * 

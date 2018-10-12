@@ -4,6 +4,6 @@ SET firstname = ${firstname},
     username = ${username},
     profilepicture = ${profilepicture}
 
-WHERE id = 1
+WHERE id = ${id}
 
 RETURNING * 
