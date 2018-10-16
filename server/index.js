@@ -103,6 +103,13 @@ app.get('/api/users', (req, res) => {
     }).catch(error => console.log(error))
 })
 
+app.get('/api/postsload', (req, res) => {
+    console.log('it works')
+    app.get('db').getImagesOffset({offset: req.query.load}).then(response =>{
+        return res.status(200).send(response)
+    }).catch(error => console.log(error))
+})
+
 app.get('/api/user/:username', (req, res) => {
     app.get('db').getUserProfile({username: req.params.username}).then(response => {
         return res.status(200).send(response)
@@ -175,5 +182,7 @@ app.get('/api/artist', (req, res) => {
         return res.status(200).send(response)
     }).catch(error => console.log(error))
 })
+
+
 
 app.listen(3005, () => console.log('server listening on port 3005'))

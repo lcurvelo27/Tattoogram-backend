@@ -111,6 +111,7 @@ class WorkInfoEditSection extends Component {
     }
 
     render() {
+        console.log(this.state)
         return(
             <div className={rightSideContentContainer}>
                 <h3>Work Info</h3>
@@ -197,7 +198,6 @@ class GalleryEditSection extends Component {
                 </div>
             )
         })
-        console.log(gallery)
         return(
             <div className={rightSideContentContainer}>
                 <h3>Gallery</h3>
@@ -226,7 +226,6 @@ class EditMenu extends Component {
 
     componentDidMount() {
         getUserAllByID().then(response => {
-            console.log(response)
             let newImagesState = response.images
             let newUserState = response.user[0] 
             let newWorkInfo = response.work[0] 
