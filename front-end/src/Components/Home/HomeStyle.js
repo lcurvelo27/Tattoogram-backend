@@ -3,7 +3,6 @@ import background from '../../utils/images/pexels-photo-1327214.jpeg'
 
 export const container = css({
     width: '50%',
-    height: '100vh',
     textAlign: 'center',
     margin: 'auto',
     fontSize: '1.3rem',
@@ -36,7 +35,8 @@ export const footer = css({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'Montserrat'
+    fontFamily: 'Montserrat',
+    marginTop: '100px'
 })
 
 export const socialMediaGrid = css({
