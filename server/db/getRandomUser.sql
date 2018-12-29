@@ -1,8 +1,10 @@
 SELECT 
+  U.id,
   U.username,
   U.firstname,
   U.lastname,
   U.profilepicture,
+  W.about,
   COALESCE(images.url, '[]') AS url 
 FROM
   users U 
@@ -29,6 +31,5 @@ FROM
 
   JOIN workinfo AS w ON w.artistid = u.id
   
-  WHERE U.role = ${role}
-  
+  ORDER BY RANDOM() LIMIT 1;
   

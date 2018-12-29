@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { textDecoration, wrapper } from './NavbarStyle'
 
 let Navbar = (props) => {
+    console.log(process.env)
     return(
         <div className={wrapper}>
             <div style={{height: '30px'}}>
